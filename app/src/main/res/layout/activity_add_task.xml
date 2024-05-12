@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/skbrlmportance"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".activity_add_task">
@@ -9,6 +10,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:orientation="vertical">
 
         <LinearLayout
@@ -35,7 +38,7 @@
         <TextView
             android:id="@+id/tvImportance"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="73dp"
             android:layout_weight="1"
             android:text="Importance" />
 
@@ -43,17 +46,45 @@
             android:id="@+id/seekBar2"
             style="@style/Widget.AppCompat.SeekBar.Discrete"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:max="10"
-            android:progress="3" />
+            android:layout_height="50dp"
+            android:max="5"
+            android:progress="1" />
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="42dp"
-            android:layout_marginTop="174dp"
-            android:text="TextView" />
+            android:text="Subject(choose or write )" />
+
+        <AutoCompleteTextView
+            android:id="@+id/etSubject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etShortTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:hint="Short Title" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:hint="Text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
     </LinearLayout>
 
 </RelativeLayout>
